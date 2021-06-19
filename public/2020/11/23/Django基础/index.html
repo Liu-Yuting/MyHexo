@@ -1,0 +1,1457 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Django 基础, 刘星星的技术博客">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Django 基础 | 刘星星的技术博客</title>
+    <link rel="icon" type="image/png" href="/myhexo/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/myhexo/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/myhexo/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/myhexo/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/myhexo/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/myhexo/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/myhexo/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/myhexo/css/my.css">
+
+    <script src="/myhexo/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/myhexo/" class="waves-effect waves-light">
+                    
+                    <img src="/myhexo/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">刘星星的技术博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/myhexo/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">刘星星的技术博客</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/myhexo/medias/featureimages/19.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Django 基础</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/myhexo/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/myhexo/tags/Django/">
+                                <span class="chip bg-color">Django</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2020-11-23
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="一、Web框架本质—-socket："><a href="#一、Web框架本质—-socket：" class="headerlink" title="一、Web框架本质—-socket："></a>一、Web框架本质—-socket：</h2><h3 id="1、web框架本质"><a href="#1、web框架本质" class="headerlink" title="1、web框架本质"></a>1、web框架本质</h3><p> 　1. 对于所有的Web应用，本质上其实就是一个socket服务端，用户的浏览器其实就是一个socket客户端。</p>
+<p> 　2. 真实web框架一般会分为两部分：服务器程序和应用程序。</p>
+<p>　　　1）服务器程序负责对socket服务器进行封装，并在请求到来时，对请求的各种数据进行整理</p>
+<p>　　　2）应用程序则负责具体的逻辑处理</p>
+<h3 id="2、WSGI（Web-Server-Gateway-Interface）"><a href="#2、WSGI（Web-Server-Gateway-Interface）" class="headerlink" title="2、WSGI（Web Server Gateway Interface）"></a>2、WSGI（Web Server Gateway Interface）</h3><p>   　　　　　　1. 不同的框架有不同的开发方式，但是无论如何，开发出的应用程序都要和服务器程序配合，才能为用户提供服务。<br>   　　　　　　2. 这样，服务器程序就需要为不同的框架提供不同的支持,只有支持它的服务器才能被开发出的应用使用,这时就需要有一个标准<br>   　　　　　　3. WSGI是一种规范，它定义了使用python编写的web app与web server之间接口格式，实现web app与web server间的解耦。</p>
+<h3 id="3、使用socket创建一个简单web服务"><a href="#3、使用socket创建一个简单web服务" class="headerlink" title="3、使用socket创建一个简单web服务"></a>3、使用socket创建一个简单web服务</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handle_request</span>(<span class="params">client</span>):</span></span><br><span class="line">    buf = client.recv(<span class="number">1024</span>)</span><br><span class="line">    client.send(<span class="string">&quot;HTTP/1.1 200 OK\r\n\r\n&quot;</span>.encode(<span class="string">&#x27;utf-8&#x27;</span>))      <span class="comment"># 伪造浏览器请求头</span></span><br><span class="line">    client.send(<span class="string">&quot;Hello, Seven&quot;</span>.encode(<span class="string">&#x27;utf-8&#x27;</span>))                  <span class="comment"># 返回数据到客户端浏览器</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">    sock.bind((<span class="string">&#x27;localhost&#x27;</span>, <span class="number">8000</span>))</span><br><span class="line">    sock.listen(<span class="number">5</span>)</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        connection, address = sock.accept()</span><br><span class="line">        handle_request(connection)</span><br><span class="line">        connection.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、自定义Web框架"><a href="#4、自定义Web框架" class="headerlink" title="4、自定义Web框架"></a>4、自定义Web框架</h3><p>　　<strong>说明：</strong> 通过python标准库提供的wsgiref模块开发一个自己的Web框架</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 自定义web框架</span></span><br><span class="line"><span class="keyword">from</span> wsgiref.simple_server <span class="keyword">import</span> make_server</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handle_index</span>():</span></span><br><span class="line">    <span class="keyword">return</span> [<span class="string">&#x27;&lt;h1&gt;Hello, Index!&lt;/h1&gt;&#x27;</span>.encode(<span class="string">&#x27;utf-8&#x27;</span>),]</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handle_date</span>():</span></span><br><span class="line">    <span class="keyword">return</span> [<span class="string">&#x27;&lt;h1&gt;Hello, date!&lt;/h1&gt;&#x27;</span>.encode(<span class="string">&#x27;utf-8&#x27;</span>),]</span><br><span class="line"></span><br><span class="line">URl_DICT = &#123;</span><br><span class="line">    <span class="string">&quot;/index&quot;</span>:handle_index,</span><br><span class="line">    <span class="string">&quot;/date&quot;</span>:handle_date,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#1 environ客户端发来的所有数据</span></span><br><span class="line"><span class="comment">#2 start_response封装要返回给用户的数据，响应头状态</span></span><br><span class="line"><span class="comment">#3 return返回的是正真用户在浏览器中看到的内容（Hello, web!）</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">RunServer</span>(<span class="params">environ, start_response</span>):</span></span><br><span class="line">    start_response(<span class="string">&#x27;200 OK&#x27;</span>, [(<span class="string">&#x27;Content-Type&#x27;</span>, <span class="string">&#x27;text/html&#x27;</span>)])</span><br><span class="line">    current_url = environ[<span class="string">&#x27;PATH_INFO&#x27;</span>]                           <span class="comment">#用户访问的url目录：/index 或 /date</span></span><br><span class="line">    func = <span class="literal">None</span></span><br><span class="line">    <span class="keyword">if</span> current_url <span class="keyword">in</span> URl_DICT:</span><br><span class="line">        func = URl_DICT[current_url]</span><br><span class="line">        <span class="keyword">return</span> func()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> [<span class="string">&#x27;&lt;h1&gt;404&lt;/h1&gt;&#x27;</span>.encode(<span class="string">&#x27;utf-8&#x27;</span>),]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    httpd = make_server(<span class="string">&#x27;&#x27;</span>, <span class="number">8001</span>, RunServer)</span><br><span class="line">    print(<span class="string">&quot;Serving HTTP on port 8000...&quot;</span>)</span><br><span class="line">    httpd.serve_forever()</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="二、MVC和MTV架构"><a href="#二、MVC和MTV架构" class="headerlink" title="二、MVC和MTV架构"></a>二、MVC和MTV架构</h2><h3 id="1、MVC架构"><a href="#1、MVC架构" class="headerlink" title="1、MVC架构"></a>1、MVC架构</h3><p>  　    1. MVC架构把一个完整的程序或者网站项目分成三个主要的组成部分，分别是Model模型，View视图，Controller控制器</p>
+<p>  　    2. 希望一个项目可以让内部数据的储存方式，外部的可见部分以及过程控制逻辑相互配合运行</p>
+<p>  　    3. 进一步简化项目复杂度，提高可扩充性，维护性，有助于不同成员之间的分工</p>
+<h3 id="2、MTV框架（Django）"><a href="#2、MTV框架（Django）" class="headerlink" title="2、MTV框架（Django）"></a>2、MTV框架（Django）</h3><p>  　　1. 对于网站而言，网页服务器在接收到远程浏览器的请求的时候，不同的网址做出不同的响应</p>
+<p>  　　2. 有不同的链接方式其实就隐含了逻辑控制，因此很难严谨的将其定义为上述三个部分</p>
+<p>  　　3. 因此Django另外设计了MTV结构（Model，Template，View）。</p>
+<h3 id="3、MVC-vs-MTV"><a href="#3、MVC-vs-MTV" class="headerlink" title="3、MVC vs MTV"></a>3、MVC vs MTV</h3><p>　　　　<strong>MVC</strong></p>
+<p>　　　　　　　　Model    View      Controller</p>
+<p>　　　　　　　　数据库    模板文件   业务处理</p>
+<p>　　　　<strong>MTV</strong></p>
+<p>　　　　　　　　Model   Template    View</p>
+<p>　　　　　　　　数据库    模板文件   业务处理</p>
+<h2 id="三、Django常用命令"><a href="#三、Django常用命令" class="headerlink" title="三、Django常用命令"></a>三、Django常用命令</h2><h3 id="1、安装Django"><a href="#1、安装Django" class="headerlink" title="1、安装Django"></a>1、安装Django</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install django</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、创建Django工程"><a href="#2、创建Django工程" class="headerlink" title="2、创建Django工程"></a>2、创建Django工程</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">D:\&gt; django-admin startproject laoniu  <span class="comment">//创建项目名称laoniu</span></span><br><span class="line"></span><br><span class="line">D:\&gt; cd laoniu</span><br><span class="line">D:\laoniu&gt; python manage.py runserver <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8002</span> <span class="comment">//运行laoniu即可用浏览器访问了</span></span><br><span class="line">D:\laoniu&gt; python manage.py createsuperuser  <span class="comment">//创建Django admin用户</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、创建app"><a href="#3、创建app" class="headerlink" title="3、创建app"></a>3、创建app</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py startapp app01</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、创建表"><a href="#4、创建表" class="headerlink" title="4、创建表"></a>4、创建表</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations  <span class="comment"># 迁移</span></span><br><span class="line">python manage.py migrate  <span class="comment"># 映射</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5、执行python-manage-py-migrate无法创建表"><a href="#5、执行python-manage-py-migrate无法创建表" class="headerlink" title="5、执行python manage.py migrate无法创建表"></a>5、执行python manage.py migrate无法创建表</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 执行时报：</span></span><br><span class="line">No migrations to apply</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 进入数据库，找到django_migrations的表，删除该app名字对应的所有记录</span></span><br><span class="line">python manage.py dbshell</span><br><span class="line">delete <span class="keyword">from</span> django_migrations where app=<span class="string">&#x27;app01&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 删除该app名字下的migrations下的除了__init__.py之外的文件。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 执行下面这两条命令：（在项目目录下）</span></span><br><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">注：如果个别app表依然无法建立可以在后面添加app名称：</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">python manage.py makemigrations/migrate app01</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6、“Column-‘last-login’-cannot-be-null”报错"><a href="#6、“Column-‘last-login’-cannot-be-null”报错" class="headerlink" title="6、“Column ‘last_login’ cannot be null”报错"></a>6、“Column ‘last_login’ cannot be null”报错</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT * FROM django_migrations;</span><br><span class="line"></span><br><span class="line">mysql&gt; TRUNCATE TABLE django_migrations;</span><br><span class="line"></span><br><span class="line">$ python manage.py migrate --fake-initial</span><br><span class="line">Make sure this message appears: 0005_alter_user_last_login_null - [OK]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="7、windows中杀死指定端口号进程"><a href="#7、windows中杀死指定端口号进程" class="headerlink" title="7、windows中杀死指定端口号进程"></a>7、windows中杀死指定端口号进程</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">D:\&gt;netstat -aon|findstr &quot;8000&quot;</span><br><span class="line">D:\&gt;taskkill /PID 12516 -t -f</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="四、配置settings-py文件"><a href="#四、配置settings-py文件" class="headerlink" title="四、配置settings.py文件"></a>四、配置settings.py文件</h2><h3 id="1、配置模板的路径"><a href="#1、配置模板的路径" class="headerlink" title="1、配置模板的路径"></a>1、配置模板的路径</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">TEMPLATES = [</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="string">&#x27;DIRS&#x27;</span>: [os.path.join(BASE_DIR,<span class="string">&#x27;templates&#x27;</span>)],</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、-配置静态目录"><a href="#2、-配置静态目录" class="headerlink" title="2、 配置静态目录"></a>2、 配置静态目录</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#像ccs和js这些静态文件如果想要使用必须在这里配置路径</span></span><br><span class="line">STATICFILES_DIRS = (</span><br><span class="line">    os.path.join(BASE_DIR,<span class="string">&#x27;static&#x27;</span>),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3、注释CSRF"><a href="#3、注释CSRF" class="headerlink" title="3、注释CSRF"></a>3、注释CSRF</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MIDDLEWARE = [</span><br><span class="line">    <span class="comment"># &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;,</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4、修改settings-py中时区"><a href="#4、修改settings-py中时区" class="headerlink" title="4、修改settings.py中时区"></a>4、修改settings.py中时区</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># LANGUAGE_CODE = &#x27;en-us&#x27;</span></span><br><span class="line">LANGUAGE_CODE = <span class="string">&#x27;zh-hans&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># TIME_ZONE = &#x27;UTC&#x27;</span></span><br><span class="line">TIME_ZONE = <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="五、Django各种url写法"><a href="#五、Django各种url写法" class="headerlink" title="五、Django各种url写法"></a>五、Django各种url写法</h2><h3 id="1、无正则匹配url（http-127-0-0-1-8000-index-nid-1-amp-pid-2）"><a href="#1、无正则匹配url（http-127-0-0-1-8000-index-nid-1-amp-pid-2）" class="headerlink" title="1、无正则匹配url（http://127.0.0.1:8000/index/?nid=1&amp;pid=2）"></a>1、无正则匹配url（<a target="_blank" rel="noopener" href="http://127.0.0.1:8000/index/?nid=1&amp;pid=2%EF%BC%89">http://127.0.0.1:8000/index/?nid=1&amp;pid=2）</a></h3><blockquote>
+<p>urls.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r&#x27;^index/&#x27;</span>, views.index),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>views.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">    print(request.GET.get(<span class="string">&#x27;nid&#x27;</span>))             <span class="comment"># 1</span></span><br><span class="line">    print(request.GET.get(<span class="string">&#x27;pid&#x27;</span>))             <span class="comment"># 2</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">&#x27;index.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>index.html</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/index/?nid=1&amp;pid=2&quot;</span>&gt;</span> url.py中不必用正则匹配 <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、基于-d-正则的url"><a href="#2、基于-d-正则的url" class="headerlink" title="2、基于(\d+)正则的url"></a>2、基于(\d+)正则的url</h3><blockquote>
+<p>urls.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r&#x27;^index/(\d+)/(\d+)/&#x27;</span>, views.index),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>views.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request,nid,pid</span>):</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">&#x27;index.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>index.html</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/index/1/2/&quot;</span>&gt;</span> 使用分组匹配，不必关心传入参数顺序 <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3、基于正则分组-P-d-，可以不考虑接收参数顺序-推荐"><a href="#3、基于正则分组-P-d-，可以不考虑接收参数顺序-推荐" class="headerlink" title="3、基于正则分组(?P\d+)，可以不考虑接收参数顺序 (推荐)"></a>3、基于正则分组(?P<nid>\d+)，可以不考虑接收参数顺序 (推荐)</h3><blockquote>
+<p>urls.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r&#x27;^index/(?P&lt;nid&gt;\d+)/(?P&lt;pid&gt;\d+)/&#x27;</span>, views.index),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>views.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request,nid,pid</span>):</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">&#x27;index.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>index.html</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/index/1/2/&quot;</span>&gt;</span> 使用分组匹配，不必关心传入参数顺序 <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4、使用name构建自己想要的url"><a href="#4、使用name构建自己想要的url" class="headerlink" title="4、使用name构建自己想要的url"></a>4、使用name构建自己想要的url</h3><h4 id="使用name在前端和后端分别构建自己想要的url"><a href="#使用name在前端和后端分别构建自己想要的url" class="headerlink" title="使用name在前端和后端分别构建自己想要的url"></a>使用name在前端和后端分别构建自己想要的url</h4><blockquote>
+<p>urls.py定义路由系统</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r&#x27;^index1/&#x27;</span>, views.index,name=<span class="string">&#x27;indexname1&#x27;</span>),</span><br><span class="line">    url(<span class="string">r&#x27;^index2/(\d+)/(\d+)/&#x27;</span>, views.index,name=<span class="string">&#x27;indexname2&#x27;</span>),</span><br><span class="line">    url(<span class="string">r&#x27;^index2/(?P&lt;pid&gt;\d+)/(?P&lt;nid&gt;\d+)/&#x27;</span>, views.index,name=<span class="string">&#x27;indexname3&#x27;</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>views.py根据reverse模块构建url</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"><span class="keyword">from</span> django.core.urlresolvers <span class="keyword">import</span> reverse</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request,*args,**kwargs</span>):</span></span><br><span class="line">    url1 = reverse(<span class="string">&#x27;indexname1&#x27;</span>)                                      <span class="comment"># /index1/</span></span><br><span class="line">    url2 = reverse(<span class="string">&#x27;indexname2&#x27;</span>, args=(<span class="number">1</span>,<span class="number">2</span>,))                         <span class="comment"># /index2/1/2/</span></span><br><span class="line">    url3 = reverse(<span class="string">&#x27;indexname3&#x27;</span>, kwargs=&#123;<span class="string">&#x27;pid&#x27;</span>: <span class="number">11</span>, <span class="string">&quot;nid&quot;</span>:<span class="number">22</span>&#125;)        <span class="comment"># /index2/11/22/</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">&#x27;index.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>index.html构建url路径前端</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&#123;% url &#x27;indexname1&#x27; %&#125;&quot;</span>&gt;</span>  http://127.0.0.1:8000/index/  <span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&#123;% url &#x27;indexname2&#x27; 1 2 %&#125;&quot;</span>&gt;</span>  http://127.0.0.1:8000/index2/1/2/  <span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&#123;% url &#x27;indexname3&#x27; 11 22 %&#125;&quot;</span>&gt;</span>  http://127.0.0.1:8000/index2/11/22/  <span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h4 id="根据request-path中的绝对路径反解出url中的name名字"><a href="#根据request-path中的绝对路径反解出url中的name名字" class="headerlink" title="根据request.path中的绝对路径反解出url中的name名字"></a>根据request.path中的绝对路径反解出url中的name名字</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">resolve_url_obj = resolve(request.path)    <span class="comment">#request.path路径： /student/homework_detail/52</span></span><br><span class="line">resolve_url_obj.url_name                   <span class="comment">#从path中解析出url名字 url_name = homework_detail</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5、Django路由分发-并使用name构建url路径"><a href="#5、Django路由分发-并使用name构建url路径" class="headerlink" title="5、Django路由分发   并使用name构建url路径"></a>5、Django路由分发   并使用name构建url路径</h3><h4 id="作用：对URL路由关系进行命名，以后可以根据此名称生成自己想要的URL"><a href="#作用：对URL路由关系进行命名，以后可以根据此名称生成自己想要的URL" class="headerlink" title="作用：对URL路由关系进行命名，以后可以根据此名称生成自己想要的URL"></a>作用：对URL路由关系进行命名，以后可以根据此名称生成自己想要的URL</h4><blockquote>
+<p>@/project/urls.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url,include</span><br><span class="line"><span class="keyword">from</span> app01 <span class="keyword">import</span> urls</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r&#x27;^app01/&#x27;</span>, include(<span class="string">&quot;app01.urls&quot;</span>, app_name=<span class="string">&#x27;app01&#x27;</span>, namespace=<span class="string">&#x27;app01&#x27;</span>)),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>@/app/urls.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</span><br><span class="line"><span class="keyword">from</span> app01 <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r&#x27;^index/$&#x27;</span>, views.index, name=<span class="string">&#x27;index&#x27;</span>),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>views.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">&#x27;index.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>index.http</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&#123;% url &quot;</span><span class="attr">app01:index</span>&quot; %&#125;&quot;&gt;</span>  http://127.0.0.1:8000/app01/index/<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="六、Django的CBV和FBV"><a href="#六、Django的CBV和FBV" class="headerlink" title="六、Django的CBV和FBV"></a>六、Django的CBV和FBV</h2><h3 id="1、FBV（function-base-view）-在views-py文件中使用函数"><a href="#1、FBV（function-base-view）-在views-py文件中使用函数" class="headerlink" title="1、FBV（function base view）:在views.py文件中使用函数"></a>1、FBV（function base view）:在views.py文件中使用函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">&#x27;index.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、CBV（class-base-view）：在views-py文件中使用类"><a href="#2、CBV（class-base-view）：在views-py文件中使用类" class="headerlink" title="2、CBV（class base view）：在views.py文件中使用类"></a>2、CBV（class base view）：在views.py文件中使用类</h3><p>​        1、 dispatch是父类中用来反射的函数，找对应的函数（比对应函数先执行）</p>
+<p>　　2、 比如你发送post请求就可以通过dispatch找到对应的post函数进行处理，get就会找到get函数处理</p>
+<blockquote>
+<p>urls.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</span><br><span class="line"><span class="keyword">from</span> app01 <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r&#x27;^home/&#x27;</span>,views.Home.as_view()), <span class="comment">#as_view是指定调用view的as_view这个方法固定写法</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>views.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> HttpResponse</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> django.views <span class="keyword">import</span> View</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Home</span>(<span class="params">View</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;使用CBV时必须要继承view父类&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dispatch</span>(<span class="params">self, request, *args, **kwargs</span>):</span></span><br><span class="line">        <span class="comment"># 调用父类中的dispatch</span></span><br><span class="line">        result = <span class="built_in">super</span>(Home,self).dispatch(request, *args, **kwargs)</span><br><span class="line">        <span class="comment"># 使用result主动继承view父类，然后return就可以重写父类的dispath方法</span></span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line">    <span class="comment"># 在这里使用get发来请求就会调用get方法，使用post发来请求就会调用post方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span>(<span class="params">self,request</span>):</span></span><br><span class="line">        print(request.method)</span><br><span class="line">        <span class="keyword">return</span> HttpResponse(<span class="string">&#x27;get&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">post</span>(<span class="params">self,request</span>):</span></span><br><span class="line">        print(request.method,<span class="string">&#x27;POST&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> HttpResponse(<span class="string">&#x27;post&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>CBV：指定某个视图函数不使用csrf验证view.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> HttpResponse</span><br><span class="line"><span class="keyword">from</span> django.views <span class="keyword">import</span> View</span><br><span class="line"><span class="keyword">from</span> django.utils.decorators <span class="keyword">import</span> method_decorator</span><br><span class="line"><span class="keyword">from</span> django.views.decorators.csrf <span class="keyword">import</span> csrf_exempt</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Home</span>(<span class="params">View</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;使用CBV时必须要继承view父类&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="meta">    @method_decorator(csrf_exempt)        # 指定Home这个视图函数不使用csrf</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dispatch</span>(<span class="params">self, request, *args, **kwargs</span>):</span></span><br><span class="line">        <span class="comment"># 调用父类中的dispatch</span></span><br><span class="line">        result = <span class="built_in">super</span>(Home,self).dispatch(request, *args, **kwargs)</span><br><span class="line">        <span class="comment"># 使用result主动继承view父类，然后return就可以重写父类的dispath方法</span></span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line">    <span class="comment"># 在这里使用get发来请求就会调用get方法，使用post发来请求就会调用post方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span>(<span class="params">self,request</span>):</span></span><br><span class="line">        print(request.method)</span><br><span class="line">        <span class="keyword">return</span> HttpResponse(<span class="string">&#x27;get&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">post</span>(<span class="params">self,request</span>):</span></span><br><span class="line">        print(request.method,<span class="string">&#x27;POST&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> HttpResponse(<span class="string">&#x27;post&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="七、-模板渲染"><a href="#七、-模板渲染" class="headerlink" title="七、 模板渲染"></a>七、 模板渲染</h2><h3 id="1、for循环"><a href="#1、for循环" class="headerlink" title="1、for循环"></a>1、for循环</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    &#123;% for k in user_dic.keys %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; k &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line"></span><br><span class="line">    &#123;% for v in user_dic.values %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; v &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line"></span><br><span class="line">    &#123;% for k,v in user_dic.items %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; k &#125;&#125;--&#123;&#123; v &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    &#123;% for k in l %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; k &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、if语句"><a href="#2、if语句" class="headerlink" title="2、if语句"></a>2、if语句</h3><blockquote>
+<p>views.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">&#x27;index.html&#x27;</span>,&#123;</span><br><span class="line">        <span class="string">&#x27;current_user&#x27;</span>:<span class="string">&quot;alex&quot;</span>,</span><br><span class="line">        <span class="string">&#x27;user_list&#x27;</span>:[<span class="string">&#x27;alex&#x27;</span>,<span class="string">&#x27;eric&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;user_dict&#x27;</span>:&#123;<span class="string">&#x27;k1&#x27;</span>:<span class="string">&#x27;v1&#x27;</span>, <span class="string">&#x27;k2&#x27;</span>:<span class="string">&#x27;v2&#x27;</span>&#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>index.html</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;current_user&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span> &#123;&#123; user_list.1 &#125;&#125; <span class="tag">&lt;/<span class="name">a</span>&gt;</span>          #在模板语言中获取列表中的元素</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span> &#123;&#123; user_dict.k1 &#125;&#125; <span class="tag">&lt;/<span class="name">a</span>&gt;</span>         #在模板语言中获取字典中元素</span><br><span class="line"></span><br><span class="line">&#123;% if age %&#125;</span><br><span class="line">   <span class="tag">&lt;<span class="name">a</span>&gt;</span>有年龄<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">   &#123;% if age &gt; 16 %&#125;</span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span>&gt;</span>老男人<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">   &#123;% else %&#125;</span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span>&gt;</span>小鲜肉<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">   &#123;% endif %&#125;</span><br><span class="line">&#123;% else %&#125;</span><br><span class="line">   <span class="tag">&lt;<span class="name">a</span>&gt;</span>无年龄<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="3、ifequal判断值相等"><a href="#3、ifequal判断值相等" class="headerlink" title="3、ifequal判断值相等"></a>3、ifequal判断值相等</h3><blockquote>
+<p>判断两个值是否相等</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if &#x27;讲师&#x27; in roles %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav nav-sidebar&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">data-url</span>=<span class="string">&quot;/webapp/staff/attendance/&quot;</span>&gt;</span>发起签到<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">data-url</span>=<span class="string">&quot;/webapp/staff/score/&quot;</span>&gt;</span>学员成绩<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、in在列表中"><a href="#4、in在列表中" class="headerlink" title="4、in在列表中"></a>4、in在列表中</h3><blockquote>
+<p>in判断是否在列表中</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if &#x27;讲师&#x27; in roles %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav nav-sidebar&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">data-url</span>=<span class="string">&quot;/webapp/staff/attendance/&quot;</span>&gt;</span>发起签到<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">data-url</span>=<span class="string">&quot;/webapp/staff/score/&quot;</span>&gt;</span>学员成绩<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、HTML转换时间格式"><a href="#5、HTML转换时间格式" class="headerlink" title="5、HTML转换时间格式"></a>5、HTML转换时间格式</h3><blockquote>
+<p>时间格式化</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 1、使用下面方法转换</span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>&#123;&#123; c.start_time|date:&#x27;Y-m-d&#x27; &#125;&#125;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"></span><br><span class="line"># 2、转换前显示的格式</span><br><span class="line">    July 2, 2017, 10:27 a.m.</span><br><span class="line"></span><br><span class="line"># 3、转换后的格式</span><br><span class="line">    2017-07-02</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、forloop显示数据序号"><a href="#6、forloop显示数据序号" class="headerlink" title="6、forloop显示数据序号"></a>6、forloop显示数据序号</h3><blockquote>
+<p>forloop模板语言中显示数据序号</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1、&lt;td&gt;&#123;&#123; forloop.counter &#125;&#125;&lt;/td&gt;</span></span><br><span class="line"><span class="comment"># 2、&lt;td&gt;&#123;&#123; forloop.counter0 &#125;&#125;&lt;/td&gt;</span></span><br><span class="line"><span class="comment"># 3、&lt;td&gt;&#123;&#123; forloop.revcounter &#125;&#125;&lt;/td&gt;</span></span><br><span class="line"><span class="comment"># 4、&lt;td&gt;&#123;&#123; forloop.revcounter0 &#125;&#125;&lt;/td&gt;</span></span><br><span class="line"><span class="comment"># 5、&lt;td&gt;&#123;&#123; forloop.last &#125;&#125;&lt;/td&gt;</span></span><br><span class="line"><span class="comment"># 6、&lt;td&gt;&#123;&#123; forloop.first &#125;&#125;&lt;/td&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="7、for循环时-json化"><a href="#7、for循环时-json化" class="headerlink" title="7、for循环时 json化"></a>7、for循环时 json化</h3><blockquote>
+<p>for循环时 json化</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@register.filter(name=&#x27;json_to_obj&#x27;)</span><br><span class="line">def json_to_obj(obj):</span><br><span class="line">    return json.loads(obj)</span><br><span class="line"><span class="comment">&lt;!-- 最主要的语句 --&gt;</span></span><br><span class="line">&#123;% for detail in parameter|safe|json_to_obj %&#125;    </span><br><span class="line"></span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="八、自定义simple-tag和自定义filter"><a href="#八、自定义simple-tag和自定义filter" class="headerlink" title="八、自定义simple_tag和自定义filter"></a>八、自定义simple_tag和自定义filter</h2><p>​        <strong>作用：在模板语言中对数据加工后返回</strong></p>
+<h3 id="1、自定义simple-tag步骤"><a href="#1、自定义simple-tag步骤" class="headerlink" title="1、自定义simple_tag步骤"></a>1、自定义simple_tag步骤</h3><p>　　1、app下创建templatetags目录，并在templatetags目录下新建任意python文件（比如：xxoo.py）</p>
+<p>　　2、settings中注册APP</p>
+<p>　　3、在templates/下的html文件中引用</p>
+<h3 id="2、在templatetags-xxoo-py文件中写处理函数"><a href="#2、在templatetags-xxoo-py文件中写处理函数" class="headerlink" title="2、在templatetags/xxoo.py文件中写处理函数"></a>2、在templatetags/xxoo.py文件中写处理函数</h3><blockquote>
+<p>在templatetags/xxoo.py文件中写处理函数</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django <span class="keyword">import</span> template</span><br><span class="line"><span class="keyword">from</span> django.utils.safestring <span class="keyword">import</span> mark_safe</span><br><span class="line"></span><br><span class="line">register = template.Library()      <span class="comment"># 对象名register不可变</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@register.simple_tag               #1 simple_tag用法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">houyafan</span>(<span class="params">a1,a2</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a1 + a2</span><br><span class="line"></span><br><span class="line"><span class="meta">@register.filter                  #2 filter用法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">jiajingze</span>(<span class="params">a1,a2</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a1 + a2</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在templates/index.html文件中使用</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 1、 在html文件最顶部引用xxoo.py文件  --&gt;</span></span><br><span class="line">&#123;% load xxoo %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 2、在html文件最顶部引用xxoo.py文件  --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- houyafan是xxoo.py文件中函数名，2 4是传入的参数 显示到页面的结果是2+4是6 --&gt;</span></span><br><span class="line"></span><br><span class="line">    &#123;% houyafan 2 4 %&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 3、filter参数格式  参数1|函数名:参数2  --&gt;</span></span><br><span class="line"></span><br><span class="line">    &#123;&#123; &quot;maliya&quot;|jiajingze:&quot;LS&quot; &#125;&#125;</span><br><span class="line"></span><br><span class="line">    &#123;% if &quot;maliya&quot;|jiajingze:&quot;LS&quot; %&#125;</span><br><span class="line"></span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3、自定义simple-tag和自定义filter优缺点比较"><a href="#3、自定义simple-tag和自定义filter优缺点比较" class="headerlink" title="3、自定义simple_tag和自定义filter优缺点比较"></a>3、自定义simple_tag和自定义filter优缺点比较</h3><p>　　1、自定simple_tag</p>
+<p>　　　　　<strong>缺点：</strong>  不能作为if条件</p>
+<p>　　　　　<strong>优点：</strong>  参数任意个</p>
+<p>　　2、自定义filter</p>
+<p>　　　　　<strong>缺点：</strong>  最多两个参数，不能加空格</p>
+<p>　　　　　<strong>优点：</strong>  能作为if条件</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/myhexo/about" rel="external nofollow noreferrer">刘星星</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://liu-yuting.gitee.io/myhexo/myhexo/2020/11/23/Django%E5%9F%BA%E7%A1%80/">https://liu-yuting.gitee.io/myhexo/myhexo/2020/11/23/Django%E5%9F%BA%E7%A1%80/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/myhexo/about" target="_blank">刘星星</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/myhexo/tags/Django/">
+                                    <span class="chip bg-color">Django</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/myhexo/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/myhexo/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/myhexo/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/myhexo/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/myhexo/2020/11/24/Django%E8%BF%9B%E9%98%B6/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/myhexo/medias/featureimages/16.jpg" class="responsive-img" alt="Django 进阶">
+                        
+                        <span class="card-title">Django 进阶</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-24
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            刘星星
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/myhexo/tags/Django/">
+                        <span class="chip bg-color">Django</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/myhexo/2020/11/22/model%E7%9A%84%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/myhexo/medias/featureimages/4.jpg" class="responsive-img" alt="model 基础操作">
+                        
+                        <span class="card-title">model 基础操作</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            刘星星
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/myhexo/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/myhexo/tags/Django/">
+                        <span class="chip bg-color">Django</span>
+                    </a>
+                    
+                    <a href="/myhexo/tags/model/">
+                        <span class="chip bg-color">model</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/myhexo/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/myhexo/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/myhexo/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/myhexo/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/myhexo/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/myhexo/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/myhexo/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2020</span>
+            
+            <span id="year">2019</span>
+            <a href="/myhexo/about" target="_blank">刘星星</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/myhexo/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/myhexo/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/myhexo/libs/materialize/materialize.min.js"></script>
+    <script src="/myhexo/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/myhexo/libs/aos/aos.js"></script>
+    <script src="/myhexo/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/myhexo/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/myhexo/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/myhexo/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/myhexo/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/myhexo/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

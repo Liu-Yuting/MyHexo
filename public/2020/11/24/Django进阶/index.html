@@ -1,0 +1,1515 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Django 进阶, 刘星星的技术博客">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Django 进阶 | 刘星星的技术博客</title>
+    <link rel="icon" type="image/png" href="/myhexo/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/myhexo/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/myhexo/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/myhexo/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/myhexo/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/myhexo/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/myhexo/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/myhexo/css/my.css">
+
+    <script src="/myhexo/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/myhexo/" class="waves-effect waves-light">
+                    
+                    <img src="/myhexo/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">刘星星的技术博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/myhexo/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/myhexo/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">刘星星的技术博客</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/myhexo/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/myhexo/medias/featureimages/16.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Django 进阶</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/myhexo/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/myhexo/tags/Django/">
+                                <span class="chip bg-color">Django</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2020-11-24
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="一、模板继承"><a href="#一、模板继承" class="headerlink" title="一、模板继承"></a>一、模板继承</h2><h3 id="模板继承的使用："><a href="#模板继承的使用：" class="headerlink" title="模板继承的使用："></a>模板继承的使用：</h3><ul>
+<li>在master.html中定义模板：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block css %&#125;&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在子类中引入要继承的模板：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends &quot;master.html&quot; %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="模板导入："><a href="#模板导入：" class="headerlink" title="模板导入："></a>模板导入：</h3><ul>
+<li><p>使用时直接导入即可：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include &quot;tag.html&quot; %&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<blockquote>
+<p>模板：templates/master.html</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    &#123;#1、子类标题#&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>&#123;% block title %&#125;&#123;% endblock %&#125;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/static/commons.css&quot;</span>&gt;</span></span><br><span class="line">    &#123;#2、子类css样式#&#125;</span><br><span class="line">        &#123;% block css %&#125; &#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;pg-header&quot;</span>&gt;</span>小男孩管理<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    &#123;#3、子类页面主要内容#&#125;</span><br><span class="line">        &#123;% block content %&#125;&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/static/jquery.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    &#123;#4、子类js样式#&#125;</span><br><span class="line">        &#123;% block js %&#125; &#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>在子类中继承模板中的内容</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#123;#1 extends关键字引入要继承的模板#&#125;</span><br><span class="line">&#123;% extends &#x27;master.html&#x27; %&#125;</span><br><span class="line"></span><br><span class="line">&#123;#2 有些时候我们继承的时候想要有一些自己的东西，比如：标题#&#125;</span><br><span class="line">&#123;% block title %&#125; 用户管理 &#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;#3 我们可以将每个页面自己的内容放到这里#&#125;</span><br><span class="line">&#123;% block content %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>用户管理<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        &#123;% for i in u %&#125;</span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123; i &#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        &#123;% endfor %&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&#123;#模板导入 这里的”tag.html”在右边#&#125;</span><br><span class="line">&#123;% include &quot;tag.html&quot; %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;#4 本网页自己的css样式#&#125;</span><br><span class="line">&#123;% block css %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        body&#123;</span><br><span class="line">            background-color: red;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">&#123;% endblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;#5 本网页自己的js样式#&#125;</span><br><span class="line">&#123;% block js %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">        alert(1234)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="二、前后端交互：提交数据、提交文件"><a href="#二、前后端交互：提交数据、提交文件" class="headerlink" title="二、前后端交互：提交数据、提交文件"></a>二、前后端交互：提交数据、提交文件</h2><blockquote>
+<p>index.html提交数据</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/login/&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span> <span class="attr">enctype</span>=<span class="string">&quot;multipart/form-data&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;user&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;用户名&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    &#123;# 1、单选框，返回单条数据的列表 #&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>     </span><br><span class="line">        男：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;gender&quot;</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">        女：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;gender&quot;</span> <span class="attr">value</span>=<span class="string">&quot;2&quot;</span>&gt;</span></span><br><span class="line">        张扬：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;gender&quot;</span> <span class="attr">value</span>=<span class="string">&quot;3&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    &#123;# 2、多选框、返回多条数据列表 #&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>     </span><br><span class="line">        男：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;favor&quot;</span> <span class="attr">value</span>=<span class="string">&quot;11&quot;</span>&gt;</span></span><br><span class="line">        女：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;favor&quot;</span> <span class="attr">value</span>=<span class="string">&quot;22&quot;</span>&gt;</span></span><br><span class="line">        张扬：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;favor&quot;</span> <span class="attr">value</span>=<span class="string">&quot;33&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    &#123;# 3、多选，返回多条数据的列表 #&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>     </span><br><span class="line">        <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;city&quot;</span> <span class="attr">multiple</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;bj&quot;</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;sh&quot;</span>&gt;</span>上海<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;gz&quot;</span>&gt;</span>广州<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    &#123;# 4、提交文件 #&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">name</span>=<span class="string">&quot;fff&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;提交&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>views.py获取数据</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">if</span> request.method == <span class="string">&#x27;GET&#x27;</span>:</span><br><span class="line">        <span class="keyword">return</span> render(request,<span class="string">&#x27;login.html&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> request.method == <span class="string">&#x27;POST&#x27;</span>:</span><br><span class="line">        v = request.POST.get(<span class="string">&#x27;gender&#x27;</span>)      <span class="comment">#1 获取单选框的value值</span></span><br><span class="line">        v = request.POST.getlist(<span class="string">&#x27;favor&#x27;</span>)   <span class="comment">#2 获取多选框value：[&#x27;11&#x27;, &#x27;22&#x27;, &#x27;33&#x27;]</span></span><br><span class="line">        v = request.POST.getlist(<span class="string">&#x27;city&#x27;</span>)    <span class="comment">#3 获取多选下拉菜单：[&#x27;bj&#x27;, &#x27;sh&#x27;, &#x27;gz&#x27;]</span></span><br><span class="line">        print(v.name,<span class="built_in">type</span>(v))</span><br><span class="line"></span><br><span class="line">        <span class="comment">#当服务器端取客户端发送来的数据，不会将数据一下拿过来而是一点点取(chunks就是文件分成的块)</span></span><br><span class="line">        </span><br><span class="line">        obj = request.FILES.get(<span class="string">&#x27;fff&#x27;</span>)      <span class="comment">#4 下面是获取客户端上传的文件（如：图片）</span></span><br><span class="line">        <span class="keyword">import</span> os</span><br><span class="line">        file_path = os.path.join(<span class="string">&#x27;upload&#x27;</span>,obj.name)</span><br><span class="line">        f = <span class="built_in">open</span>(file_path,mode=<span class="string">&#x27;wb&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> obj.chunks():</span><br><span class="line">            f.write(i)</span><br><span class="line">        f.close()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> render(request,<span class="string">&#x27;login.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>request获取</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1、request.POST</span></span><br><span class="line"><span class="comment"># 2、request.GET</span></span><br><span class="line"><span class="comment"># 3、request.FILES</span></span><br><span class="line"><span class="comment"># 4、request.getlist</span></span><br><span class="line"><span class="comment"># 5、request.method</span></span><br><span class="line"><span class="comment"># 6、request.path_info                   #获取当前url</span></span><br><span class="line"><span class="comment"># 7、request.body                        #自己获取数据</span></span><br><span class="line"><span class="comment"># 8、a = ‘中国’</span></span><br><span class="line">    response = HttpResponse(a)</span><br><span class="line">    response[“name”] = ‘alex’        <span class="comment">#HttpResponse不仅可以在响应头中传字符串，也可以传键值对</span></span><br><span class="line">    response.set_cookie()                <span class="comment">#设置cookie实质也是向请求头中传入键值对</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="三、django的生命周期和中间件"><a href="#三、django的生命周期和中间件" class="headerlink" title="三、django的生命周期和中间件"></a>三、django的生命周期和中间件</h2><ul>
+<li><h3 id="中间件的处理过程"><a href="#中间件的处理过程" class="headerlink" title="中间件的处理过程"></a>中间件的处理过程</h3></li>
+</ul>
+<ol>
+<li>首现由客户端发起请求，会将请求交给settings.py中排在最前面的中间件</li>
+<li>中间件收到请求后回调用类中的process_request方法处理，然后交给下一个中间件的process_request函数</li>
+<li>到达最后一个中间件的process_request函数处理后会到达路由系统</li>
+<li>然后经过路由系统直接跳转到第一个中间件的process_view函数，依次向后面中间件的process_view传递最后到达view.py处理函数，获取网页中的数据</li>
+<li>获取的数据会交给最后一个中间件的process_response方法处理，然后依次向前面的中间件process_response方法提交请求的内容，最后最前面的中间件将请求数据返回到客户端</li>
+<li>在任意中间件的process_request和process_view方法中有返回值就会直接返回给process_response</li>
+</ol>
+<ul>
+<li><h3 id="生命周期请求过程"><a href="#生命周期请求过程" class="headerlink" title="生命周期请求过程"></a>生命周期请求过程</h3><ul>
+<li><h4 id="客户端访问"><a href="#客户端访问" class="headerlink" title="客户端访问"></a>客户端访问</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 客户端在浏览器中输入url路径访问指定网页</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="请求发送给django程序"><a href="#请求发送给django程序" class="headerlink" title="请求发送给django程序"></a>请求发送给django程序</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1、首先会交给中间件，中间件处理后交给路由系统</span></span><br><span class="line"><span class="comment"># 2、路由系统</span></span><br><span class="line">	<span class="comment"># django程序会到urls.py文件中找到对应请求的处理函数（视图函数）</span></span><br><span class="line"><span class="comment"># 3、视图函数</span></span><br><span class="line">	<span class="comment"># 1：视图函数会找到对应的HTML模板文件</span></span><br><span class="line">    <span class="comment"># 2：然后到数据库中获取数据替换HTML模板中的内容</span></span><br><span class="line">    <span class="comment"># 3：使用static的js和css文件结合对HTML渲染</span></span><br><span class="line">    <span class="comment"># 4：最后django将最终渲染后的HTML文件返回给中间件</span></span><br><span class="line"><span class="comment"># 4、中间件再调用process_response方法处理，最后给客户</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="四、中间件使用举例"><a href="#四、中间件使用举例" class="headerlink" title="四、中间件使用举例"></a>四、中间件使用举例</h2><h3 id="1、创建存放中间件的文件夹"><a href="#1、创建存放中间件的文件夹" class="headerlink" title="1、创建存放中间件的文件夹"></a>1、创建存放中间件的文件夹</h3><ul>
+<li>在工程目录下创建任意目录，这里创建为：project/middle/m1.py</li>
+</ul>
+<h3 id="2、在project-settings-py文件中注册自己的中间件"><a href="#2、在project-settings-py文件中注册自己的中间件" class="headerlink" title="2、在project/settings.py文件中注册自己的中间件"></a>2、在project/settings.py文件中注册自己的中间件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MIDDLEWARE = [</span><br><span class="line">    <span class="string">&#x27;middle.m1.Row1&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;middle.m1.Row2&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;middle.m1.Row3&#x27;</span>,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、在view-py文件中写处理函数test"><a href="#3、在view-py文件中写处理函数test" class="headerlink" title="3、在view.py文件中写处理函数test"></a>3、在view.py文件中写处理函数test</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="comment"># int(&#x27;fds&#x27;)    #当views函数出现异常，中间件中的process_exception执行</span></span><br><span class="line">    print(<span class="string">&#x27;没带钱|&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">&#x27;ok&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、在project-middle-m1-py文件中定义中间件"><a href="#4、在project-middle-m1-py文件中定义中间件" class="headerlink" title="4、在project/middle/m1.py文件中定义中间件"></a>4、在project/middle/m1.py文件中定义中间件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.utils.deprecation <span class="keyword">import</span> MiddlewareMixin</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Row1</span>(<span class="params">MiddlewareMixin</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_request</span>(<span class="params">self,request</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;process_request_1&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_view</span>(<span class="params">self,request, view_func, view_func_args, view_func_kwargs</span>):</span></span><br><span class="line">        <span class="comment">#view_func_args:   url中传递的非字典的值会用这个变量接收</span></span><br><span class="line">        <span class="comment">#view_func_kwargs: url中传递的字典会传递到这个变量接收（如：nid=1）</span></span><br><span class="line">        print(<span class="string">&#x27;process_view_1&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_response</span>(<span class="params">self,request, response</span>):</span>    <span class="comment">#response就是拿到的返回信息</span></span><br><span class="line">        print(<span class="string">&#x27;response_1&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> response</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_exception</span>(<span class="params">self, request, exception</span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;只有当views函数中异常这个函数才会执行&#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">isinstance</span>(exception, ValueError):</span><br><span class="line">            <span class="keyword">return</span> HttpResponse(<span class="string">&#x27;&gt;&gt;出现异常了&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Row2</span>(<span class="params">MiddlewareMixin</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_request</span>(<span class="params">self,request</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;process_request_2&#x27;</span>)</span><br><span class="line">        <span class="comment">#1 如果在Row2中的process_request中有返回值，那么就不会到达Row3</span></span><br><span class="line">        <span class="comment">#2 Row2直接将返回值交给自己的process_response再交给Row1的process_response</span></span><br><span class="line">        <span class="comment">#3 最后客户端页面显示的就是‘走’请求没机会到达views函数，不会打印‘没带钱’</span></span><br><span class="line">        <span class="comment"># return HttpResponse(&#x27;走&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_view</span>(<span class="params">self,request, view_func, view_func_args, view_func_kwargs</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;process_view_2&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_response</span>(<span class="params">self,request, response</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;response_2&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> response</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Row3</span>(<span class="params">MiddlewareMixin</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_request</span>(<span class="params">self,request</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;process_request_3&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_view</span>(<span class="params">self,request, view_func, view_func_args, view_func_kwargs</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;process_view_3&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_response</span>(<span class="params">self,request, response</span>):</span></span><br><span class="line">        print(<span class="string">&#x27;response_3&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> response</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="五、cookie"><a href="#五、cookie" class="headerlink" title="五、cookie"></a>五、cookie</h2><h3 id="1、cookie简介"><a href="#1、cookie简介" class="headerlink" title="1、cookie简介"></a>1、cookie简介</h3><ol>
+<li>cookie实质是客户端硬盘存放的键值对，利用这个特性可以用来做用户验证</li>
+<li>比如：{“username” : “Liuxingxing”}  # 再次访问url就会携带这些信息过来</li>
+</ol>
+<h3 id="2、前端操作cookie"><a href="#2、前端操作cookie" class="headerlink" title="2、前端操作cookie"></a>2、前端操作cookie</h3><p>​    说明：使用下面的方法操作cookie必须先引入jquery.cookie.js</p>
+<ol>
+<li><p>前端获取cookie值：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> v = $.cookie(<span class="string">&#x27;per_page_count&#x27;</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>前端设置cookie值：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.cookie(<span class="string">&#x27;per_page_count&#x27;</span>, v);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="3、后端操作cookie"><a href="#3、后端操作cookie" class="headerlink" title="3、后端操作cookie"></a>3、后端操作cookie</h3><p>​    说明：response = HttpResponse(…) 或 response = render(request, …)</p>
+<ol>
+<li><p>后端设置cookie值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.set_cookie(<span class="string">&#x27;username&#x27;</span>, <span class="string">&#x27;liuxingxing&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>后端获取cookie值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.COOKIES.get(<span class="string">&#x27;username&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="4、设置cookie时常用的参数"><a href="#4、设置cookie时常用的参数" class="headerlink" title="4、设置cookie时常用的参数"></a>4、设置cookie时常用的参数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cookie</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="comment">#1 获取cookie中username111得值</span></span><br><span class="line">    request.COOKIES.get(<span class="string">&#x27;username111&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#2 设置cookie的值，关闭浏览器失效</span></span><br><span class="line">    response.set_cookie(<span class="string">&#x27;key&#x27;</span>,<span class="string">&quot;value&quot;</span>)</span><br><span class="line">    <span class="comment"># 设置cookie, N秒只后失效</span></span><br><span class="line">    response.set_cookie(<span class="string">&#x27;username111&#x27;</span>,<span class="string">&quot;value&quot;</span>,max_age=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#3 设置cookie, 截止时间失效（expires后面指定那个时间点失效）</span></span><br><span class="line">    <span class="keyword">import</span> datetime</span><br><span class="line">    current_date = datetime.datetime.utcnow()</span><br><span class="line">    exp_date = current_date + datetime.timedelta(seconds=<span class="number">5</span>)         <span class="comment">#seconds指定再过多少秒过期</span></span><br><span class="line">    response.set_cookie(<span class="string">&#x27;username111&#x27;</span>,<span class="string">&quot;value&quot;</span>,expires=exp_date)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#4 设置cookie是可以使用关键字salt对cookie加密（加密解密的salt中值必须相同）</span></span><br><span class="line">    obj = HttpResponse(<span class="string">&#x27;s&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    obj.set_signed_cookie(<span class="string">&#x27;username&#x27;</span>,<span class="string">&quot;kangbazi&quot;</span>,salt=<span class="string">&quot;asdfasdf&quot;</span>)</span><br><span class="line">    request.get_signed_cookie(<span class="string">&#x27;username&#x27;</span>,salt=<span class="string">&quot;asdfasdf&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#5 设置cookie生效路径</span></span><br><span class="line">    path = <span class="string">&#x27;/&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#6 删除cookie中is_login的值</span></span><br><span class="line">    response.delete_cookie(<span class="string">&#x27;is_login&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> response</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、使用cookie实现用户登录、注销"><a href="#5、使用cookie实现用户登录、注销" class="headerlink" title="5、使用cookie实现用户登录、注销"></a>5、使用cookie实现用户登录、注销</h3><blockquote>
+<p>views.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render,HttpResponse,redirect</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">    username = request.COOKIES.get(<span class="string">&#x27;username&#x27;</span>)        <span class="comment"># 获取cookie</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> username:</span><br><span class="line">        <span class="keyword">return</span> redirect(<span class="string">&#x27;/login/&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(username)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">if</span> request.method == <span class="string">&quot;GET&quot;</span>:</span><br><span class="line">        <span class="keyword">return</span> render(request,<span class="string">&#x27;login.html&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> request.method == <span class="string">&quot;POST&quot;</span>:</span><br><span class="line">        u = request.POST.get(<span class="string">&#x27;username&#x27;</span>)</span><br><span class="line">        p = request.POST.get(<span class="string">&#x27;pwd&#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span> u == <span class="string">&#x27;tom&#x27;</span> <span class="keyword">and</span> p == <span class="string">&#x27;123&#x27;</span>:</span><br><span class="line">            res = redirect(<span class="string">&#x27;/index/&#x27;</span>)</span><br><span class="line">            res.set_cookie(<span class="string">&#x27;username&#x27;</span>,u,max_age=<span class="number">500</span>)        <span class="comment"># 设置500s免登陆</span></span><br><span class="line">            <span class="keyword">return</span> res</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> render(request,<span class="string">&#x27;login.html&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">logout</span>(<span class="params">req</span>):</span></span><br><span class="line">    response = redirect(<span class="string">&#x27;/login/&#x27;</span>)</span><br><span class="line">    <span class="comment">#清理cookie里保存username</span></span><br><span class="line">    response.delete_cookie(<span class="string">&#x27;username&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> response</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>login.html</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/login/&quot;</span> <span class="attr">method</span>=<span class="string">&quot;POST&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;用户名&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;pwd&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;密码&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;提交&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6、前端设置、获取cookie"><a href="#6、前端设置、获取cookie" class="headerlink" title="6、前端设置、获取cookie"></a>6、前端设置、获取cookie</h3><blockquote>
+<p>urls.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> app01 <span class="keyword">import</span> views</span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r&#x27;^admin/&#x27;</span>, admin.site.urls),</span><br><span class="line">    url(<span class="string">r&#x27;^index/&#x27;</span>, views.index),</span><br><span class="line">    url(<span class="string">r&#x27;^get_ck/&#x27;</span>, views.get_ck),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>views.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render,HttpResponse</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">&#x27;index.html&#x27;</span>, )</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_ck</span>(<span class="params">request</span>):</span></span><br><span class="line">    val = request.COOKIES.get(<span class="string">&#x27;per_page_count&#x27;</span>)</span><br><span class="line">    print(<span class="string">&#x27;get_ck&#x27;</span>,val)</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(val)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>index.html</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    &#123;# 选择每页显示多少条的select单选框 #&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;ps&quot;</span> <span class="attr">onchange</span>=<span class="string">&quot;changePageSize(this)&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;10&quot;</span>&gt;</span>10<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;20&quot;</span>&gt;</span>20<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;50&quot;</span>&gt;</span>50<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;100&quot;</span>&gt;</span>100<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/static/jquery-1.12.4.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/static/jquery.cookie.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//当框架加载完成后获取cookie的值，并设置到select中</span></span></span><br><span class="line"><span class="javascript">        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">           <span class="keyword">var</span> v = $.cookie(<span class="string">&#x27;per_page_count&#x27;</span>);     <span class="comment">//前端获取cookie值</span></span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(v);</span></span><br><span class="line"><span class="javascript">            $(<span class="string">&#x27;#ps&#x27;</span>).val(v);</span></span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">changePageSize</span>(<span class="params">ths</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="comment">//获取select单选框选择的值（10,20,50,100）这些选项</span></span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> v = $(ths).val();</span></span><br><span class="line"><span class="javascript">            <span class="comment">//使用cookie将v的值传递到后台</span></span></span><br><span class="line"><span class="javascript">            $.cookie(<span class="string">&#x27;per_page_count&#x27;</span>,v, &#123; <span class="attr">expires</span>: <span class="number">7</span> &#125;);        <span class="comment">//前端设置cookie值</span></span></span><br><span class="line"><span class="javascript">            $.cookie(<span class="string">&#x27;per_page_count&#x27;</span>,v, &#123;<span class="string">&#x27;path&#x27;</span>:<span class="string">&#x27;/&#x27;</span>&#125;);       <span class="comment">// 将这个路径设置为网站的根目录</span></span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="六、session"><a href="#六、session" class="headerlink" title="六、session"></a>六、session</h2><h3 id="1、session作用及原理"><a href="#1、session作用及原理" class="headerlink" title="1、session作用及原理"></a>1、session作用及原理</h3><p>​    注释：session操作依赖cookie</p>
+<ol>
+<li>基于cookie做用户验证时：敏感信息不适合放在cookie中</li>
+<li>用户成功登录后服务端会成为一个随机字符串并将这个字符串作为字典的key，将用户登录信息作为value</li>
+<li>当用户再次登录时就会带着这个随机字符串过来，就不用再一次输入用户名和密码了</li>
+<li>用户使用cookie将这个随机字符串保存到客户端本地，当用户再来时携带这个随机字符串，服务器根据这个字符串查找对应的session中的值，这样就避免敏感信息泄露</li>
+</ol>
+<h3 id="2、cookie和session对比"><a href="#2、cookie和session对比" class="headerlink" title="2、cookie和session对比"></a>2、cookie和session对比</h3><ol>
+<li>cookie是保存在浏览器端的键值对</li>
+<li>session是保存在服务器端的键值对</li>
+</ol>
+<h3 id="3、django中支持下面五种session，可以在settings-py中配置"><a href="#3、django中支持下面五种session，可以在settings-py中配置" class="headerlink" title="3、django中支持下面五种session，可以在settings.py中配置"></a>3、django中支持下面五种session，可以在settings.py中配置</h3><blockquote>
+<p>5种session在settings.py中公用配置参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment"># 1、SESSION_COOKIE_NAME ＝ &quot;sessionid&quot;          # Session的cookie保存在浏览器上时的key，即：sessionid＝随机字符串（默认）</span></span><br><span class="line">&gt;<span class="comment"># 2、SESSION_COOKIE_PATH ＝ &quot;/&quot;                  # Session的cookie保存的路径（默认）</span></span><br><span class="line">&gt;<span class="comment"># 3、SESSION_COOKIE_DOMAIN = None                # Session的cookie保存的域名（默认）</span></span><br><span class="line">&gt;<span class="comment"># 4、SESSION_COOKIE_SECURE = False               # 是否Https传输cookie（默认）</span></span><br><span class="line">&gt;<span class="comment"># 5、SESSION_COOKIE_HTTPONLY = True              # 是否Session的cookie只支持http传输（默认）</span></span><br><span class="line">&gt;<span class="comment"># 6、SESSION_COOKIE_AGE = 1209600                # Session的cookie失效日期（2周）（默认）</span></span><br><span class="line">&gt;<span class="comment"># 7、SESSION_EXPIRE_AT_BROWSER_CLOSE = False     # 是否关闭浏览器使得Session过期（默认）</span></span><br><span class="line">&gt;<span class="comment"># 8、SESSION_SAVE_EVERY_REQUEST = False          # 是否每次请求都保存Session，默认修改之后才保存（默认）</span></span><br><span class="line">                                           <span class="comment"># 10s 免登陆时，这里必须配置成True</span></span><br></pre></td></tr></table></figure>
+
+<p>settings.py中配置使用session5种方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">index11</span>(<span class="params">request</span>):</span>                <span class="comment">#request.session中存放了所有用户信息</span></span><br><span class="line">&gt;<span class="comment">#1 获取   Session中数据</span></span><br><span class="line">&gt;request.session[<span class="string">&#x27;k1&#x27;</span>]</span><br><span class="line">&gt;request.session.get(<span class="string">&#x27;k1&#x27;</span>,<span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment">#2 设置</span></span><br><span class="line">&gt;request.session[<span class="string">&#x27;k1&#x27;</span>] = <span class="number">123</span></span><br><span class="line">&gt;request.session.setdefault(<span class="string">&#x27;k1&#x27;</span>,<span class="number">123</span>)    <span class="comment"># 存在则不设置</span></span><br><span class="line"></span><br><span class="line">&gt;<span class="comment">#3 删除</span></span><br><span class="line">&gt;<span class="keyword">del</span> request.session[<span class="string">&#x27;k1&#x27;</span>]               <span class="comment">#删除某个键值对</span></span><br><span class="line">&gt;<span class="comment">#删除某用户登录时在数据库生成的随机字符串的整条数据全部删除</span></span><br><span class="line">&gt;request.session.delete(<span class="string">&quot;session_key&quot;</span>)</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment">#4 注销  当用户注销时使用request.session.clear()</span></span><br><span class="line">&gt;request.session.clear()         <span class="comment">#这个短句相当于下面这个长句</span></span><br><span class="line">&gt;request.session.delete(request.session.session_key)</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment">#5 设置超时时间（默认超时时间两周）</span></span><br><span class="line">&gt;request.session.set_expiry(<span class="string">&quot;value&quot;</span>)</span><br><span class="line">&gt;<span class="comment"># 如果value是个整数，session会在些秒数后失效。</span></span><br><span class="line">&gt;<span class="comment"># 如果value是个datatime或timedelta，session就会在这个时间后失效。</span></span><br><span class="line">&gt;<span class="comment"># 如果value是0,用户关闭浏览器session就会失效。</span></span><br><span class="line">&gt;<span class="comment"># 如果value是None,session会依赖全局session失效策略。</span></span><br><span class="line"></span><br><span class="line">&gt;<span class="comment"># 所有 键、值、键值对</span></span><br><span class="line">&gt;request.session.keys()</span><br><span class="line">&gt;request.session.values()</span><br><span class="line">&gt;request.session.items()</span><br><span class="line">&gt;request.session.iterkeys()</span><br><span class="line">&gt;request.session.itervalues()</span><br><span class="line">&gt;request.session.iteritems()</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment"># 获取某个用户session的随机字符串（不常用）</span></span><br><span class="line">&gt;request.session.session_key</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment"># 将所有Session失效日期小于当前日期的数据删除（数据库中可以设置超时时间）</span></span><br><span class="line">&gt;request.session.clear_expired()</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment"># 检查 用户session的随机字符串 在数据库中是否存在（不常用）</span></span><br><span class="line">&gt;request.session.exists(<span class="string">&quot;session_key&quot;</span>)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="5、session实现用户十秒免登陆，以及注销功能"><a href="#5、session实现用户十秒免登陆，以及注销功能" class="headerlink" title="5、session实现用户十秒免登陆，以及注销功能"></a>5、session实现用户十秒免登陆，以及注销功能</h3><ol>
+<li><p>session默认使用数据库session，使用前必须先执行下面命令</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>settings.py中配置每次用户访问都会推迟更新时间</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">SESSION_SAVE_EVERY_REQUEST = True</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实现10s免登陆关键步骤</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1、设置session：request.session[&#x27;is_login&#x27;] = True</span></span><br><span class="line"><span class="comment"># 2、设置10s超时：request.session.set_expiry(10)</span></span><br><span class="line"><span class="comment"># 3、获取session：request.session.get(&#x27;is_login&#x27;)</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>views.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render,HttpResponse,redirect</span><br><span class="line"></span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">index</span>(<span class="params">request</span>):</span></span><br><span class="line">&gt;<span class="keyword">if</span> request.session.get(<span class="string">&#x27;is_login&#x27;</span>):</span><br><span class="line"><span class="keyword">return</span> render(request,<span class="string">&#x27;index.html&#x27;</span>,&#123;<span class="string">&#x27;username&#x27;</span>:request.session.get(<span class="string">&#x27;username&#x27;</span>)&#125;)</span><br><span class="line">&gt;<span class="keyword">else</span>:</span><br><span class="line"><span class="keyword">return</span> HttpResponse(<span class="string">&#x27;滚&#x27;</span>)</span><br><span class="line"></span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">login</span>(<span class="params">request</span>):</span></span><br><span class="line">&gt;<span class="keyword">if</span> request.method == <span class="string">&#x27;GET&#x27;</span>:</span><br><span class="line"><span class="keyword">return</span> render(request,<span class="string">&#x27;login.html&#x27;</span>)</span><br><span class="line">&gt;<span class="keyword">elif</span> request.method == <span class="string">&#x27;POST&#x27;</span>:</span><br><span class="line">user = request.POST.get(<span class="string">&#x27;user&#x27;</span>)</span><br><span class="line">pwd = request.POST.get(<span class="string">&#x27;pwd&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> user == <span class="string">&#x27;tom&#x27;</span> <span class="keyword">and</span> pwd == <span class="string">&#x27;123&#x27;</span>:</span><br><span class="line">    <span class="comment">#1 生成随机字符串</span></span><br><span class="line">    <span class="comment">#2 写到用户浏览器cookie</span></span><br><span class="line">    <span class="comment">#3 保存到session中</span></span><br><span class="line">    <span class="comment">#4 在随机字符串对应的字典中设置相关内容</span></span><br><span class="line">    <span class="comment">#5 有等号设置session键值对，没有等号获取键的值</span></span><br><span class="line"></span><br><span class="line">    request.session[<span class="string">&#x27;username&#x27;</span>]=user       <span class="comment">#1 用户登录成功设置用户名</span></span><br><span class="line"></span><br><span class="line">    request.session[<span class="string">&#x27;is_login&#x27;</span>] = <span class="literal">True</span>     <span class="comment">#2 登陆成功时可以设置一个标志</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> request.POST.get(<span class="string">&#x27;rmb&#x27;</span>) == <span class="string">&#x27;1&#x27;</span>:     <span class="comment">#3 当勾选checkbox框后设置10秒超时</span></span><br><span class="line">        request.session.set_expiry(<span class="number">10</span>)     <span class="comment">#4 设置10s后超时，需要重新登录</span></span><br><span class="line">    <span class="keyword">return</span> redirect(<span class="string">&#x27;/index&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">&#x27;login.html&#x27;</span>)</span><br><span class="line"></span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">logout</span>(<span class="params">request</span>):</span></span><br><span class="line">&gt;request.session.clear()       <span class="comment">#5 访问&#x27;/logout/&#x27;时注销登陆</span></span><br><span class="line">&gt;<span class="keyword">return</span> redirect(<span class="string">&#x27;/login/&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>login.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/login/&quot;</span> <span class="attr">method</span>=<span class="string">&quot;POST&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;user&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;pwd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;rmb&quot;</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span>&gt;</span>十秒免登陆</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;提交&quot;</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">h1</span>&gt;</span>欢饮登陆：&#123;&#123; username &#125;&#125;,&#123;&#123; request.session.username &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/logout/&quot;</span>&gt;</span>注销<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>settings.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;SESSION_SAVE_EVERY_REQUEST = <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<h2 id="七、django序列化操作"><a href="#七、django序列化操作" class="headerlink" title="七、django序列化操作"></a>七、django序列化操作</h2><h3 id="1、为什么需要序列化操作"><a href="#1、为什么需要序列化操作" class="headerlink" title="1、为什么需要序列化操作"></a>1、为什么需要序列化操作</h3><ol>
+<li>python中很多格式的数据类型不能通过简单的json直接序列化转换成字符串格式传到前端</li>
+<li>如：form提交数据出现错误，返回的是django的error.dict对象，不能直接用python的json序列化(必须先as_json)</li>
+</ol>
+<h3 id="2、django序列化（方法一：前端两次序列化得到错误信息）"><a href="#2、django序列化（方法一：前端两次序列化得到错误信息）" class="headerlink" title="2、django序列化（方法一：前端两次序列化得到错误信息）"></a>2、django序列化（方法一：前端两次序列化得到错误信息）</h3><ol>
+<li>首现后端先用as_json将error.dict对象转换成字符串，然后通过json传递到前端</li>
+<li>前端第一次序列化：将整个错误信息大字典变成对象，提取其中的error小字典</li>
+<li>前端第二次序列化：由于获取的小字典是字符串，还需要将error序列化成对象，才能获取到错误信息</li>
+</ol>
+<blockquote>
+<p>views.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render,HttpResponse</span><br><span class="line">&gt;<span class="keyword">from</span> django <span class="keyword">import</span> forms</span><br><span class="line">&gt;<span class="keyword">from</span> django.forms <span class="keyword">import</span> fields         <span class="comment">#fields字段专门用于验证</span></span><br><span class="line">&gt;<span class="keyword">from</span> django.forms <span class="keyword">import</span> widgets        <span class="comment">#widgets专门用于生成html标签</span></span><br><span class="line">&gt;<span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment">#这里为了方便没有将创建form放到forms.py中</span></span><br><span class="line">&gt;<span class="class"><span class="keyword">class</span> <span class="title">LoginForm</span>(<span class="params">forms.Form</span>):</span></span><br><span class="line">&gt;username = fields.CharField()</span><br><span class="line">&gt;password = fields.CharField(</span><br><span class="line">  max_length=<span class="number">12</span>,</span><br><span class="line">  min_length=<span class="number">4</span>,</span><br><span class="line">  error_messages=&#123;</span><br><span class="line">      <span class="string">&#x27;required&#x27;</span>:<span class="string">&#x27;密码不能为空&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;min_length&#x27;</span>:<span class="string">&#x27;密码长度不能小于4&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;max_length&#x27;</span>:<span class="string">&#x27;密码长度不能大于12&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&gt;)</span><br><span class="line"></span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">login</span>(<span class="params">request</span>):</span></span><br><span class="line">&gt;<span class="keyword">if</span> request.method == <span class="string">&#x27;GET&#x27;</span>:</span><br><span class="line">  <span class="keyword">return</span> render(request,<span class="string">&#x27;login.html&#x27;</span>)</span><br><span class="line">&gt;<span class="keyword">elif</span> request.method == <span class="string">&#x27;POST&#x27;</span>:</span><br><span class="line">  ret = &#123;<span class="string">&#x27;status&#x27;</span>:<span class="literal">True</span>,<span class="string">&#x27;error&#x27;</span>:<span class="literal">None</span>,<span class="string">&#x27;data&#x27;</span>:<span class="literal">None</span>&#125;</span><br><span class="line">  obj = LoginForm(request.POST)</span><br><span class="line">  <span class="keyword">if</span> obj.is_valid():</span><br><span class="line">      print(obj.cleaned_data)</span><br><span class="line">      <span class="comment">#正确信息：&#123;&#x27;password&#x27;: &#x27;1234567343434343434&#x27;, &#x27;username&#x27;: &#x27;tom&#x27;&#125;</span></span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">      <span class="comment"># obj.errors中封装的数据必须变成字符串才能json操作</span></span><br><span class="line">      ret[<span class="string">&#x27;error&#x27;</span>] = obj.errors.as_json()    <span class="comment"># as_json() 返回的是字符串</span></span><br><span class="line">      <span class="comment"># print(obj.errors.as_data())</span></span><br><span class="line">  <span class="keyword">return</span> HttpResponse(json.dumps(ret))</span><br></pre></td></tr></table></figure>
+
+<p>login.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">&quot;fm&quot;</span>&gt;</span></span><br><span class="line">  &#123;% csrf_token %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;pwd-err&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">&quot;submit&quot;</span>&gt;</span>ajax提交<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/static/jquery-1.12.4.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">  /*  #### 当不填密码提交后返回的错误信息时这样的  ####</span><br><span class="line"><span class="javascript">  &#123;<span class="string">&#x27;status&#x27;</span>: True,</span></span><br><span class="line"><span class="javascript">  <span class="string">&#x27;error&#x27;</span>: <span class="string">&#x27;&#123;&quot;password&quot;: [&#123;&quot;code&quot;: &quot;required&quot;, &quot;message&quot;: &quot;密码不能为空&quot;&#125;]&#125;&#x27;</span>,</span></span><br><span class="line"><span class="javascript">  <span class="string">&#x27;data&#x27;</span>: None&#125;</span></span><br><span class="line">   */</span><br><span class="line"></span><br><span class="line"><span class="javascript">&gt;$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">   $(<span class="string">&#x27;#submit&#x27;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">       $.ajax(&#123;</span></span><br><span class="line"><span class="javascript">           url: <span class="string">&#x27;/login/&#x27;</span>,</span></span><br><span class="line"><span class="javascript">           type:<span class="string">&#x27;POST&#x27;</span>,</span></span><br><span class="line"><span class="javascript">           data:$(<span class="string">&#x27;#fm&#x27;</span>).serialize(),</span></span><br><span class="line"><span class="javascript">           success:<span class="function"><span class="keyword">function</span>(<span class="params">arg</span>)</span>&#123;  <span class="comment">// 服务端返回的arg是字符串格式</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">             arg = <span class="built_in">JSON</span>.parse(arg); <span class="comment">// 第一次json转换：将arg字符串转换成对象</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">             error = arg.error;  <span class="comment">// 获取到arg对象中的error(error此时是字符串)</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">             error = <span class="built_in">JSON</span>.parse(error);  <span class="comment">// 第二次json转换：将error字符串转换成对象</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">             pwd_err = error.password[<span class="number">0</span>].message; <span class="comment">// 转换成对象后才能获取到最终的错误信息</span></span></span><br><span class="line"><span class="javascript">             <span class="built_in">console</span>.log(pwd_err);  <span class="comment">//pwd_err打印结果：密码不能为空</span></span></span><br><span class="line"><span class="javascript">             $(<span class="string">&#x27;#pwd-err&#x27;</span>).text(pwd_err);</span></span><br><span class="line">        &#125;,</span><br><span class="line"><span class="javascript">        error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="3、django序列化（方法二：前端一次序列化得到错误信息）"><a href="#3、django序列化（方法二：前端一次序列化得到错误信息）" class="headerlink" title="3、django序列化（方法二：前端一次序列化得到错误信息）"></a>3、django序列化（方法二：前端一次序列化得到错误信息）</h3><ol>
+<li>首现后端as_data()将获取到错误数据</li>
+<li>然后将数据放到JsonCustomEncoder类中转换成指定格式的字典，前端一次即可得到错误提示信息</li>
+</ol>
+<blockquote>
+<p>views.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render,HttpResponse</span><br><span class="line">&gt;<span class="keyword">from</span> django <span class="keyword">import</span> forms</span><br><span class="line">&gt;<span class="keyword">from</span> django.forms <span class="keyword">import</span> fields        <span class="comment">#fields字段专门用于验证</span></span><br><span class="line">&gt;<span class="keyword">from</span> django.forms <span class="keyword">import</span> widgets       <span class="comment">#widgets专门用于生成html标签</span></span><br><span class="line">&gt;<span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">&gt;<span class="keyword">from</span> django.core.exceptions <span class="keyword">import</span> ValidationError</span><br><span class="line">&gt;<span class="class"><span class="keyword">class</span> <span class="title">JsonCustomEncoder</span>(<span class="params">json.JSONEncoder</span>):</span></span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">default</span>(<span class="params">self, field</span>):</span></span><br><span class="line">  <span class="keyword">if</span> <span class="built_in">isinstance</span>(field, ValidationError):</span><br><span class="line">      <span class="keyword">return</span> &#123;<span class="string">&#x27;code&#x27;</span>:field.code,<span class="string">&#x27;messages&#x27;</span>:field.messages&#125;</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">      <span class="keyword">return</span> json.JSONEncoder.default(self, field)</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment">#这里为了方便没有将创建form放到forms.py中</span></span><br><span class="line">&gt;<span class="class"><span class="keyword">class</span> <span class="title">LoginForm</span>(<span class="params">forms.Form</span>):</span></span><br><span class="line">&gt;username = fields.CharField()</span><br><span class="line">&gt;password = fields.CharField(</span><br><span class="line">  max_length=<span class="number">12</span>,</span><br><span class="line">  min_length=<span class="number">4</span>,</span><br><span class="line">  error_messages=&#123;</span><br><span class="line">      <span class="string">&#x27;required&#x27;</span>:<span class="string">&#x27;密码不能为空&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;min_length&#x27;</span>:<span class="string">&#x27;密码长度不能小于4&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;max_length&#x27;</span>:<span class="string">&#x27;密码长度不能大于12&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&gt;)</span><br><span class="line"></span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">login</span>(<span class="params">request</span>):</span></span><br><span class="line">&gt;<span class="keyword">if</span> request.method == <span class="string">&#x27;GET&#x27;</span>:</span><br><span class="line">  <span class="keyword">return</span> render(request,<span class="string">&#x27;login.html&#x27;</span>)</span><br><span class="line">&gt;<span class="keyword">elif</span> request.method == <span class="string">&#x27;POST&#x27;</span>:</span><br><span class="line">  ret = &#123;<span class="string">&#x27;status&#x27;</span>:<span class="literal">True</span>,<span class="string">&#x27;error&#x27;</span>:<span class="literal">None</span>,<span class="string">&#x27;data&#x27;</span>:<span class="literal">None</span>&#125;</span><br><span class="line">  obj = LoginForm(request.POST)</span><br><span class="line">  <span class="keyword">if</span> obj.is_valid():</span><br><span class="line">      print(obj.cleaned_data)</span><br><span class="line">      <span class="comment">#正确信息：&#123;&#x27;password&#x27;: &#x27;1234567343434343434&#x27;, &#x27;username&#x27;: &#x27;tom&#x27;&#125;</span></span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">      <span class="comment"># obj.errors中封装的数据必须变成字符串才能json操作</span></span><br><span class="line">      ret[<span class="string">&#x27;error&#x27;</span>] = obj.errors.as_data()  <span class="comment"># as_json() 返回的是字符串</span></span><br><span class="line">      <span class="comment"># print(obj.errors.as_data())  # &#123;&#x27;password&#x27;: [ValidationError([&#x27;密码不能为空&#x27;])]&#125;</span></span><br><span class="line">      print(ret)</span><br><span class="line">  request = json.dumps(ret,cls=JsonCustomEncoder)</span><br><span class="line">  print(request)</span><br><span class="line">  <span class="keyword">return</span> HttpResponse(request)</span><br></pre></td></tr></table></figure>
+
+<p>index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">&quot;fm&quot;</span>&gt;</span></span><br><span class="line">  &#123;% csrf_token %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;pwd-err&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">&quot;submit&quot;</span>&gt;</span>ajax提交<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/static/jquery-1.12.4.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">      $(<span class="string">&#x27;#submit&#x27;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">          $.ajax(&#123;</span></span><br><span class="line"><span class="javascript">              url: <span class="string">&#x27;/login/&#x27;</span>,</span></span><br><span class="line"><span class="javascript">              type:<span class="string">&#x27;POST&#x27;</span>,</span></span><br><span class="line"><span class="javascript">              data:$(<span class="string">&#x27;#fm&#x27;</span>).serialize(),</span></span><br><span class="line"><span class="javascript">              success:<span class="function"><span class="keyword">function</span>(<span class="params">arg</span>)</span>&#123;  <span class="comment">//服务端返回的是字符串格式</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">                  arg = <span class="built_in">JSON</span>.parse(arg);  <span class="comment">//这里只需要一次序列化就可以得到error字典格式</span></span></span><br><span class="line"></span><br><span class="line">                  pwd_err = arg.error.password[0].messages;</span><br><span class="line"></span><br><span class="line"><span class="javascript">                  <span class="built_in">console</span>.log(pwd_err);  <span class="comment">//pwd_err打印结果：密码不能为空</span></span></span><br><span class="line"><span class="javascript">                  $(<span class="string">&#x27;#pwd-err&#x27;</span>).text(pwd_err);</span></span><br><span class="line">              &#125;,</span><br><span class="line"><span class="javascript">              error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line">              &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="八、CSRF跨站请求伪造"><a href="#八、CSRF跨站请求伪造" class="headerlink" title="八、CSRF跨站请求伪造"></a>八、CSRF跨站请求伪造</h2><h3 id="1、CSRF原理"><a href="#1、CSRF原理" class="headerlink" title="1、CSRF原理"></a>1、CSRF原理</h3><ol>
+<li>当用户第一次发送get请求时，服务端不仅给客户返回get内容，而且中间包含一个随机字符串</li>
+<li>这个字符串是加密的，只有服务端自己可以反解</li>
+<li>当客户端发送post请求提交数据时，服务端会验证客户端是否携带这个随机字符串，没有就会引发csrf错误</li>
+<li>如果没有csrf，那么黑客可以通过任意表单向我们的后台提交数据，不安全</li>
+</ol>
+<h3 id="2、form和ajax提交数据，解决CSRF方法"><a href="#2、form和ajax提交数据，解决CSRF方法" class="headerlink" title="2、form和ajax提交数据，解决CSRF方法"></a>2、form和ajax提交数据，解决CSRF方法</h3><ol>
+<li>$.cookie(‘csrftoken’)可以获取到那个随机字符串</li>
+<li>headers{}可以将指定信息添加到请求头部发送给服务端</li>
+<li>通过cookie和通过获取的随机字符串不同</li>
+</ol>
+<blockquote>
+<p>form和ajax提交数据，解决CSRF方法</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/login/&quot;</span> <span class="attr">method</span>=<span class="string">&quot;POST&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&gt;&#123;#1 form方式提交仅需要在form表单中添加csrf_token生成随机字符串即可 #&#125;</span><br><span class="line">&gt;&#123;% csrf_token %&#125;</span><br><span class="line"></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">name</span>=<span class="string">&quot;提交&quot;</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;btn&quot;</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;按钮&quot;</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/static/jquery-1.12.4.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;/static/jquery.cookie.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&gt;&#123;#2 使用ajax提交CSRF字符串的两种方法 #&#125;</span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">&gt;$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"></span><br><span class="line">&gt;&#123;# 方法一： 仅用定义一个ajaxSetup实现对所有页面ajax提交数据自动发送CSRF字符串 #&#125;</span><br><span class="line"><span class="javascript">  <span class="comment">//xhr是ajax内部封装的一个方法</span></span></span><br><span class="line"><span class="javascript">  $.ajaxSetup(&#123;</span></span><br><span class="line"><span class="javascript">     beforeSend:<span class="function"><span class="keyword">function</span>(<span class="params">xhr,settings</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">          xhr.setRequestHeader(<span class="string">&#x27;X-CSRFtoken&#x27;</span>,$.cookie(<span class="string">&#x27;csrftoken&#x27;</span>))</span></span><br><span class="line">     &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&gt;&#123;# 方法二： 必须在每个ajax提交的函数中都指定要发送CSRF字符串 #&#125;</span><br><span class="line"><span class="javascript">  $(<span class="string">&#x27;#btn&#x27;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">      $.ajax(&#123;</span></span><br><span class="line"><span class="javascript">          url: <span class="string">&#x27;/login/&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          type: <span class="string">&#x27;POST&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          data: &#123;<span class="string">&#x27;user&#x27;</span>:<span class="string">&#x27;root&#x27;</span>,<span class="string">&#x27;pwd&#x27;</span>:<span class="string">&#x27;123&#x27;</span>&#125;,</span></span><br><span class="line"><span class="javascript">          headers:&#123;<span class="string">&#x27;X-CSRFtoken&#x27;</span>:$.cookie(<span class="string">&#x27;csrftoken&#x27;</span>)&#125;,</span></span><br><span class="line"><span class="javascript">          success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&gt;&#125;)</span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="3、ajax提交过滤"><a href="#3、ajax提交过滤" class="headerlink" title="3、ajax提交过滤"></a>3、ajax提交过滤</h3><p>​    说明：对以GET、HEAD、OPTIONS、TRACE这四种提交数据方法不提交CSRF字符串</p>
+<blockquote>
+<p>ajax提交过滤</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">&gt;<span class="keyword">var</span> csrftoken = $.cookie(<span class="string">&#x27;csrftoken&#x27;</span>);</span></span><br><span class="line"><span class="javascript">&gt;<span class="function"><span class="keyword">function</span> <span class="title">csrfSafeMethod</span>(<span class="params">method</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// these HTTP methods do not require CSRF protection</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">return</span> (<span class="regexp">/^(GET|HEAD|OPTIONS|TRACE)$/</span>.test(method));</span></span><br><span class="line">&gt;&#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">&gt;$.ajaxSetup(&#123;</span></span><br><span class="line"><span class="javascript">  beforeSend: <span class="function"><span class="keyword">function</span>(<span class="params">xhr, settings</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">if</span> (!csrfSafeMethod(settings.type) &amp;&amp; !<span class="built_in">this</span>.crossDomain) &#123;</span></span><br><span class="line"><span class="javascript">          xhr.setRequestHeader(<span class="string">&quot;X-CSRFToken&quot;</span>, csrftoken);</span></span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&gt;&#125;);</span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="4、指定哪些函数启用CSRF验证"><a href="#4、指定哪些函数启用CSRF验证" class="headerlink" title="4、指定哪些函数启用CSRF验证"></a>4、指定哪些函数启用CSRF验证</h3><blockquote>
+<p>方法一：启用CSRF验证指，仅指定某些页面不需要验证</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment">#1 启用settings文件中的CSRF</span></span><br><span class="line"></span><br><span class="line">&gt;MIDDLEWARE = [</span><br><span class="line">&gt;<span class="string">&#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;</span>,</span><br><span class="line">&gt;]</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment">#2 对不需要验证的函数添加@csrf_exempt</span></span><br><span class="line"></span><br><span class="line">&gt;<span class="keyword">from</span> django.views.decorators.csrf <span class="keyword">import</span> csrf_exempt,csrf_protect</span><br><span class="line">&gt;@csrf_exempt</span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">login</span>(<span class="params">request</span>):</span></span><br><span class="line">&gt;<span class="string">&#x27;处理函数内容&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>方法二：关闭CSRF验证指，仅指定某些页面需要验证</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment">#1 关闭settings文件中的CSRF</span></span><br><span class="line"></span><br><span class="line">&gt;MIDDLEWARE = [</span><br><span class="line">&gt;<span class="comment"># &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;,</span></span><br><span class="line">&gt;]</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment">#2 对需要验证的函数添加@csrf_protect</span></span><br><span class="line"></span><br><span class="line">&gt;<span class="keyword">from</span> django.views.decorators.csrf <span class="keyword">import</span> csrf_exempt,csrf_protect</span><br><span class="line">&gt;@csrf_protect</span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">login</span>(<span class="params">request</span>):</span></span><br><span class="line">&gt;<span class="string">&#x27;处理函数内容&#x27;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="九、信号"><a href="#九、信号" class="headerlink" title="九、信号"></a>九、信号</h2><h3 id="1、信号的作用"><a href="#1、信号的作用" class="headerlink" title="1、信号的作用"></a>1、信号的作用</h3><ol>
+<li>django中提供了”信号调度”，用于在框架执行操作时解耦</li>
+<li>通俗来讲：就是一些动作发生的时候，信号允许特定的发送者去提醒一些接受者</li>
+<li>比如，我们在删除数据的时候需要记录删除了什么就可以使用信号了</li>
+</ol>
+<h3 id="2、django内置信号"><a href="#2、django内置信号" class="headerlink" title="2、django内置信号"></a>2、django内置信号</h3><p>​    作用：django中提供了”信号调度”，用于在框架执行操作时解耦；通俗来讲：就是一些动作发生的时候，信号允许特定的发送者去提醒一些接受者</p>
+<ol>
+<li><p>django内置信号</p>
+<blockquote>
+<p>django内置信号</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="number">1</span>、    Model signals</span><br><span class="line">&gt;<span class="comment">#1  obj = models.UserInfo(user=&#x27;root&#x27;) django的modal执行其构造方法</span></span><br><span class="line">&gt;<span class="comment">#2  obj.save()    django的modal对象保存</span></span><br><span class="line">&gt;pre_init                 <span class="comment"># django的modal执行其构造方法前，自动触发</span></span><br><span class="line">&gt;post_init                <span class="comment"># django的modal执行其构造方法后，自动触发</span></span><br><span class="line">&gt;pre_save                 <span class="comment"># django的modal对象保存前，自动触发</span></span><br><span class="line">&gt;post_save                <span class="comment"># django的modal对象保存后，自动触发</span></span><br><span class="line"></span><br><span class="line">&gt;pre_delete               <span class="comment"># django的modal对象删除前，自动触发</span></span><br><span class="line">&gt;post_delete              <span class="comment"># django的modal对象删除后，自动触发</span></span><br><span class="line">&gt;m2m_changed              <span class="comment"># django的modal中使用m2m字段操作第三张表（add,remove,clear）前后，自动触发</span></span><br><span class="line">&gt;class_prepared           <span class="comment"># 程序启动时，检测已注册的app中modal类，对于每一个类，自动触发</span></span><br><span class="line"></span><br><span class="line">&gt;<span class="number">2</span>、Management signals</span><br><span class="line">&gt;pre_migrate              <span class="comment"># 执行migrate命令前，自动触发</span></span><br><span class="line">&gt;post_migrate             <span class="comment"># 执行migrate命令后，自动触发</span></span><br><span class="line"></span><br><span class="line">&gt;<span class="number">3</span>、Request/response signals</span><br><span class="line">&gt;request_started          <span class="comment"># 请求到来前，自动触发</span></span><br><span class="line">&gt;request_finished         <span class="comment"># 请求结束后，自动触发</span></span><br><span class="line">&gt;got_request_exception    <span class="comment"># 请求异常后，自动触发</span></span><br><span class="line"></span><br><span class="line">&gt;<span class="number">4</span>、Test signals</span><br><span class="line">&gt;setting_changed          <span class="comment"># 使用test测试修改配置文件时，自动触发</span></span><br><span class="line">&gt;template_rendered        <span class="comment"># 使用test测试渲染模板时，自动触发</span></span><br><span class="line"></span><br><span class="line">&gt;<span class="number">5</span>、Database Wrappers</span><br><span class="line">&gt;connection_created       <span class="comment"># 创建数据库连接时，自动触发</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>使用django内置信号（当django新建数据时自动触发某函数）</p>
+<ol>
+<li>首现在django工程目录下新建sg.py文件，将django中所有内置信号全部导入到里面</li>
+<li>在project/__ init __.py中导入sg.py（作用：当django一运行就自动导入所有信号）</li>
+<li>在views.py中定义single函数，执行obj = model.UserInfo(user=”root”)测试</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>project/sg.py自定义信号</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment">#1  pizza_done是自己定义的信号名称</span></span><br><span class="line">&gt;<span class="comment">#2 [&quot;toppings&quot;, &quot;size&quot;]指定要想触发这个信号必须传递这两个参数</span></span><br><span class="line">&gt;<span class="keyword">import</span> django.dispatch</span><br><span class="line">&gt;pizza_done = django.dispatch.Signal(providing_args=[<span class="string">&quot;toppings&quot;</span>, <span class="string">&quot;size&quot;</span>])</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment">#3 定义一个函数</span></span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">callback</span>(<span class="params">sender, **kwargs</span>):</span></span><br><span class="line">&gt;print(<span class="string">&quot;callback&quot;</span>)</span><br><span class="line">&gt;print(sender,kwargs)</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment">#4 将上面定义的函数注册到我们自定义的信号中</span></span><br><span class="line">&gt;pizza_done.connect(callback)</span><br></pre></td></tr></table></figure>
+
+<p>project/__ init __.py导入sy.py模板</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">import</span> sg</span><br></pre></td></tr></table></figure>
+
+<p>project/views.py中触发信号</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">signal</span>(<span class="params">request</span>):</span></span><br><span class="line">&gt;<span class="keyword">from</span> sg <span class="keyword">import</span> pizza_done</span><br><span class="line">&gt;pizza_done.send(sender=<span class="string">&#x27;suifasongde&#x27;</span>,toppings=<span class="string">&#x27;suibianxie&#x27;</span>,size=<span class="string">&#x27;suibianxie&#x27;</span>)</span><br><span class="line"></span><br><span class="line">&gt;<span class="keyword">return</span> HttpResponse(<span class="string">&#x27;111&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="十、django中的缓存"><a href="#十、django中的缓存" class="headerlink" title="十、django中的缓存"></a>十、django中的缓存</h2><h3 id="1、django缓存的作用"><a href="#1、django缓存的作用" class="headerlink" title="1、django缓存的作用"></a>1、django缓存的作用</h3><ol>
+<li>由于django是动态网站，所以每次请求均会去数据库进行相应的操作，当程序访问量增大时，耗时必然会更加明显</li>
+<li>缓存讲一个某个views的返回值保存至内存或memcache中，5分钟内再有人来访问时，则不再去执行views中的操作</li>
+<li>而是直接从内存或者Redis中之前缓存的内容拿到，并返回</li>
+</ol>
+<h3 id="2、django中提供了六种缓存方式"><a href="#2、django中提供了六种缓存方式" class="headerlink" title="2、django中提供了六种缓存方式"></a>2、django中提供了六种缓存方式</h3><blockquote>
+<p>1：开发调试缓存</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment"># 开发调试缓存（虽然配置上，但实际没有缓存，还是到数据库取）</span></span><br><span class="line"></span><br><span class="line">&gt;CACHES = &#123;</span><br><span class="line">&gt;<span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">  <span class="string">&#x27;BACKEND&#x27;</span>: <span class="string">&#x27;django.core.cache.backends.dummy.DummyCache&#x27;</span>,  <span class="comment"># 引擎</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">#注： 下面这些参数时公用的，五种缓存都可以使用</span></span><br><span class="line">  <span class="string">&#x27;TIMEOUT&#x27;</span>: <span class="number">300</span>,           <span class="comment"># 缓存超时时间（默认300，None表示永不过期，0表示立即过期）</span></span><br><span class="line">  <span class="string">&#x27;OPTIONS&#x27;</span>:&#123;</span><br><span class="line">      <span class="string">&#x27;MAX_ENTRIES&#x27;</span>: <span class="number">300</span>,   <span class="comment"># 最大缓存个数（默认300）</span></span><br><span class="line">      <span class="string">&#x27;CULL_FREQUENCY&#x27;</span>: <span class="number">3</span>,  <span class="comment"># 缓存到达最大个数之后，剔除缓存个数的比例(3就是1/3)</span></span><br><span class="line">  &#125;,</span><br><span class="line">&gt;&#125;</span><br><span class="line">&gt;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2：内存缓存</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment"># 注：内存缓存本质上就是在内存中维护一个字典，所存储的形式就是字典的键值对组合</span></span><br><span class="line"></span><br><span class="line">&gt;CACHES = &#123;</span><br><span class="line">&gt;<span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">  <span class="string">&#x27;BACKEND&#x27;</span>: <span class="string">&#x27;django.core.cache.backends.locmem.LocMemCache&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;LOCATION&#x27;</span>: <span class="string">&#x27;unique-snowflake&#x27;</span>,     <span class="comment">#这个参数指定变量名必须唯一</span></span><br><span class="line">&gt;&#125;</span><br><span class="line">&gt;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3：文件缓存</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;CACHES = &#123;</span><br><span class="line">&gt;<span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">  <span class="string">&#x27;BACKEND&#x27;</span>: <span class="string">&#x27;django.core.cache.backends.filebased.FileBasedCache&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;LOCATION&#x27;</span>: os.path.join(BASE_DIR,<span class="string">&#x27;cache&#x27;</span>),  <span class="comment">#缓存内容存放的文件夹路径</span></span><br><span class="line">&gt;&#125;</span><br><span class="line">&gt;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4：数据库缓存</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment"># 注：执行创建表命令 python manage.py createcachetable</span></span><br><span class="line">&gt;CACHES = &#123;</span><br><span class="line">&gt;<span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">  <span class="string">&#x27;BACKEND&#x27;</span>: <span class="string">&#x27;django.core.cache.backends.db.DatabaseCache&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;LOCATION&#x27;</span>: <span class="string">&#x27;my_cache_table&#x27;</span>, <span class="comment"># 数据库表名（名字是自己取的）</span></span><br><span class="line">&gt;&#125;</span><br><span class="line">&gt;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5：Memcache缓存（两种）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment"># 注：Memcache缓存有两个模块：python-memcached模块、 pylibmc模块</span></span><br><span class="line">&gt;CACHES = &#123;</span><br><span class="line">&gt;<span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">  <span class="string">&#x27;BACKEND&#x27;</span>: <span class="string">&#x27;django.core.cache.backends.memcached.MemcachedCache&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;LOCATION&#x27;</span>: <span class="string">&#x27;127.0.0.1:11211&#x27;</span>,          <span class="comment">#使用ip加端口连接memcached</span></span><br><span class="line">&gt;&#125;</span><br><span class="line">&gt;&#125;</span><br><span class="line"></span><br><span class="line">&gt;CACHES = &#123;</span><br><span class="line">&gt;<span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">  <span class="string">&#x27;BACKEND&#x27;</span>: <span class="string">&#x27;django.core.cache.backends.memcached.MemcachedCache&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;LOCATION&#x27;</span>: <span class="string">&#x27;unix:/tmp/memcached.sock&#x27;</span>,     <span class="comment">#以文件的形式连本地memcached</span></span><br><span class="line">&gt;&#125;</span><br><span class="line">&gt;&#125;</span><br><span class="line"></span><br><span class="line">&gt;CACHES = &#123;</span><br><span class="line">&gt;<span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">  <span class="string">&#x27;BACKEND&#x27;</span>: <span class="string">&#x27;django.core.cache.backends.memcached.MemcachedCache&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;LOCATION&#x27;</span>: [               <span class="comment"># memcached天生支持集群</span></span><br><span class="line">      <span class="comment">#1 均衡分配</span></span><br><span class="line">      <span class="string">&#x27;172.19.26.240:11211&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;172.19.26.242:11211&#x27;</span>,</span><br><span class="line">      <span class="comment">#2 调整权重(权重和请求比例成正比)</span></span><br><span class="line">      (<span class="string">&#x27;172.19.26.240:11211&#x27;</span>,<span class="number">1</span>),</span><br><span class="line">      (<span class="string">&#x27;172.19.26.242:11211&#x27;</span>,<span class="number">10</span>),</span><br><span class="line">  ]</span><br><span class="line">&gt;&#125;</span><br><span class="line">&gt;&#125;</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment"># 注： pylibmc模块只改变上面&#x27;BACKEND&#x27;配置为下面样式即可</span></span><br><span class="line">&gt;<span class="comment"># &#x27;BACKEND&#x27;: &#x27;django.core.cache.backends.memcached.PyLibMCCache&#x27;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="3、django中缓存三种应用"><a href="#3、django中缓存三种应用" class="headerlink" title="3、django中缓存三种应用"></a>3、django中缓存三种应用</h3><ol>
+<li><p>页面级别缓存（需要views.py文件中引入cache_page）</p>
+<blockquote>
+<p>页面级别缓存</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment"># 1、views.py文件中的处理函数</span></span><br><span class="line"></span><br><span class="line">&gt;<span class="keyword">from</span> django.views.decorators.cache <span class="keyword">import</span> cache_page</span><br><span class="line">&gt;@cache_page(<span class="number">6</span>)                 <span class="comment">#6秒后缓存失效</span></span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">cache</span>(<span class="params">request</span>):</span></span><br><span class="line">&gt;<span class="keyword">import</span> time</span><br><span class="line">&gt;ctime = time.time()</span><br><span class="line">&gt;<span class="keyword">return</span> render(request,<span class="string">&#x27;cache.html&#x27;</span>,&#123;<span class="string">&#x27;ctime&#x27;</span>:ctime&#125;)</span><br><span class="line"></span><br><span class="line">&gt;<span class="comment"># 2、cache.html文件中内容都会被缓存，5s后才会失效</span></span><br><span class="line"></span><br><span class="line">&gt;&lt;body&gt;</span><br><span class="line">&gt;&lt;h1&gt;&#123;&#123; ctime &#125;&#125;&lt;/h1&gt;      #页面刷新时时间不会时刻变化，5s过后才会变一次</span><br><span class="line">&gt;&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>模板级别缓存（直接在cache.html模板文件中指定某个值放入缓存）</p>
+<blockquote>
+<p>模板级别缓存</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&#123;#1 在文件最顶部引入TemplateTag#&#125;</span><br><span class="line">&gt;&#123;% load cache %&#125;</span><br><span class="line"></span><br><span class="line">&gt;<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">&gt;&#123;#2 使用缓存   c1是缓存的key值 #&#125;</span><br><span class="line">&gt;&#123;% cache 5 c1 %&#125;        &#123;# 将数据缓存5秒 #&#125;</span><br><span class="line">&#123;&#123; ctime &#125;&#125;</span><br><span class="line">&gt;&#123;% endcache %&#125;</span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>全局缓存（只需要在settings.py中间配置的首尾各加一条）</p>
+<p>注：设置全局缓存后所有页面的模板数据都会应用</p>
+<blockquote>
+<p>全局缓存</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;MIDDLEWARE = [</span><br><span class="line"><span class="string">&#x27;django.middleware.cache.UpdateCacheMiddleware&#x27;</span>,</span><br><span class="line"><span class="comment"># 其他中间件...</span></span><br><span class="line"><span class="string">&#x27;django.middleware.cache.FetchFromCacheMiddleware&#x27;</span>,</span><br><span class="line">&gt;]</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/myhexo/about" rel="external nofollow noreferrer">刘星星</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://liu-yuting.gitee.io/myhexo/myhexo/2020/11/24/Django%E8%BF%9B%E9%98%B6/">https://liu-yuting.gitee.io/myhexo/myhexo/2020/11/24/Django%E8%BF%9B%E9%98%B6/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/myhexo/about" target="_blank">刘星星</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/myhexo/tags/Django/">
+                                    <span class="chip bg-color">Django</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/myhexo/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/myhexo/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/myhexo/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/myhexo/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/myhexo/2020/12/14/git%E4%B8%8Edocker/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/myhexo/medias/featureimages/20.jpg" class="responsive-img" alt="git与docker">
+                        
+                        <span class="card-title">git与docker</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            刘星星
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/myhexo/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/myhexo/tags/docker/">
+                        <span class="chip bg-color">docker</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/myhexo/2020/11/23/Django%E5%9F%BA%E7%A1%80/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/myhexo/medias/featureimages/19.jpg" class="responsive-img" alt="Django 基础">
+                        
+                        <span class="card-title">Django 基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            刘星星
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/myhexo/tags/Django/">
+                        <span class="chip bg-color">Django</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/myhexo/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/myhexo/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/myhexo/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/myhexo/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/myhexo/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/myhexo/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/myhexo/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2020</span>
+            
+            <span id="year">2019</span>
+            <a href="/myhexo/about" target="_blank">刘星星</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/myhexo/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/myhexo/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/myhexo/libs/materialize/materialize.min.js"></script>
+    <script src="/myhexo/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/myhexo/libs/aos/aos.js"></script>
+    <script src="/myhexo/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/myhexo/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/myhexo/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/myhexo/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/myhexo/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/myhexo/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
